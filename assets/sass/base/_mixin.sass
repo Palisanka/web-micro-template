@@ -1,0 +1,81 @@
+// mixin.sass
+// Définie toutes les mixins utilisé
+
+// Media queries
+@mixin media($size)
+	@media screen and (max-width: $size)
+		@content
+
+// Positionnement floatant
+$floatValue: (right:right, left:left)
+@each $align, $value in $floatValue
+	.float-#{$align}
+		float: $value
+
+// Toutes les couleurs & les backgrounds
+$colorArray: (white:white, black:$color-black, grey:$color-grey, yellow:$color-yellow, light-blue:$color-light-blue, dark-blue:$color-dark-blue, beige:$color-beige, bg-dark-blue: url("assets/img/fond_dark.png"), bg-blue: url("assets/img/fond_2.png"), bg-light-blue: url("assets/img/fond.png"), bg--blue: url("assets/img/fond_3.png"))
+@each $color, $col in $colorArray
+	.color-#{$color}
+		color: $col !important
+
+@each $bg-color, $col in $colorArray
+	.bg-#{$bg-color}
+		background: $col !important
+
+
+// Padding
+// paddBot20 - paddTop20 - padd20
+// @for $i from 1 through 200
+// 	.paddBot#{$i}
+// 		padding-bottom: ($i * 1px) !important
+// 	.paddTop#{$i}
+// 		padding-top: ($i * 1px) !important
+// 	.padd#{$i}
+// 		padding: ($i * 1px) auto !important
+
+//Margin
+// margBot20 - margTop20 - marg20
+// margCenter
+// @for $i from 1 through 200
+// 	.margBot#{$i}
+// 		margin-bottom: ($i * 1px) !important
+// 	.margTop#{$i}
+// 		margin-top: ($i * 1px) !important
+// 	.marg#{$i}
+// 		margin: ($i * 1px) auto !important
+//
+// 	.margCenter
+// 		margin: 0 auto !important
+
+// width
+// @for $i from 1 through 200
+// 	.width-#{$i}
+// 		width: $i !important
+// 		+media($phone-l)
+// 			width: 100% !important
+
+// Align / Positionnement de texte
+@mixin right
+	text-align: right
+@mixin left
+	text-align: left
+@mixin center
+	text-align: center
+
+.txt-right
+	+right
+.txt-left
+	+left
+.txt-center
+	+center
+
+// Transition
+@mixin trans
+	transition: 700ms all cubic-bezier(0.19, 1, 0.22, 1)
+
+@mixin trans-ease
+	transition: 1200ms ease
+
+.clear
+	clear: both
+

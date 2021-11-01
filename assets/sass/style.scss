@@ -1,0 +1,37 @@
+/*
+Theme Name: Synerlab
+Theme URI: http://agence-mute.fr/
+Author: Mute
+Author URI: http://www.agence-mute.fr
+Description: Thème De base
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Depuis le dossier sass : sass --watch style.scss:../../style.css;
+
+*/
+
+@charset "UTF-8";
+
+// libs
+@import 'libs/_normalize.scss';
+@import 'libs/_boilerplate.scss';
+
+//base
+@import 'base/_var.sass';
+@import 'base/_mixin.sass';
+@import 'base/_grid.sass';
+@import 'base/_typo.sass';
+
+//layout
+@import 'layout/_header.sass';
+@import 'layout/_footer.sass';
+@import 'layout/_home.sass';
+
+//component
+@import 'component/_block.sass';
+@import 'component/_form.sass';
+@import 'component/_button.sass';
+
+@charset "UTF-8";

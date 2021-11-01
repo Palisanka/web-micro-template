@@ -1,0 +1,54 @@
+// grid.sass
+// Définie les propriétés de base tel que :
+// reset & prop sur html, body
+// les row
+// __ Pour la grille susy voir susy.scss
+
+html *
+	box-sizing: border-box
+
+html
+	margin-top: 0 !important
+* html body
+	margin-top: 0 !important
+@media screen and ( max-width: 782px )
+	html
+		margin-top: 0 !important
+	* html body
+		margin-top: 0 !important
+
+html,
+body
+	width: 100%
+	height: 100%
+	padding: 0
+	margin: 0
+	background-repeat: repeat
+	background-color: white
+	-webkit-overflow-scrolling: touch
+	&.hiddenOverflow
+		overflow: hidden
+
+body.in-transition
+	transition: transform 900ms ease
+
+.header,
+.footer,
+.breadcrumb,
+.section
+	width: 100%
+
+.clear
+	clear: both
+
+main
+	margin: 20px
+	padding: 0 20px
+	height: 100%
+
+hr
+	border-top: transparent
+	clear: both
+	+media($phone-l)
+		padding: 0
+		margin: 0

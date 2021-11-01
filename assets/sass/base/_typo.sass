@@ -1,0 +1,47 @@
+// Typo.sass
+
+html,
+body
+	font-family: $font-roman
+	font-size: 14px
+	color: $color-black
+	line-height: 24px
+	letter-spacing: 0.5px
+
+ul,li
+	list-style: none
+	position: relative
+	margin: 10px 0
+	li:before
+		content: ''
+		width: 5px
+		height: 5px
+		position: absolute
+		left: -30px
+		top: 10px
+		// background-image: url('assets/img/separation_jaune.png')
+		// background-size: cover
+		// background-repeat: no-repeat
+		// transform: rotate(-13deg)
+
+a
+	text-decoration: none
+	color: grey
+
+p
+	margin: 10px 0
+
+strong
+	font-weight: bold
+
+h1,.h1
+	font-family: $font-script
+	font-size: 20px
+	color: black
+	margin: 40px 0
+	display: block
+	text-align: center
+
+
+.button
+	text-transform: uppercase
